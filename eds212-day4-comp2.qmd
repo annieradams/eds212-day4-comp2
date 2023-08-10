@@ -2,6 +2,7 @@
 title: "Day 4 Comp Session 2"
 format: html
 editor: visual
+  warning: FALSE
 ---
 
 ## 
@@ -35,4 +36,19 @@ summary(penguins)
 ```{r}
 skim(penguins)
 ggpairs(penguins)
+```
+
+# Exploratory Plots in GGplot2
+
+```{r}
+ggplot(data = penguins, aes(x= flipper_length_mm)) + 
+  geom_histogram(fill= "orange", color= "purple")+
+  theme_minimal()
+```
+
+```{r}
+ggplot(data= penguins, aes(x= species, y= bill_length_mm))+
+  geom_boxplot(fill = "yellow", aes(color=island)) +
+  geom_jitter(color= "magenta", aes(size= bill_depth_mm), alpha= 0.5) +
+  theme_dark()
 ```
