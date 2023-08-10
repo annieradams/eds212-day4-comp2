@@ -5,3 +5,34 @@ editor: visual
 ---
 
 ## 
+
+```{r}
+library(GGally)
+library(skimr)
+library(palmerpenguins)
+library(tidyverse)
+```
+
+## Basic Data Exploration: 
+
+-   names
+
+-   dim
+
+-   summary
+
+-   
+
+```{r}
+names(penguins)
+dim(penguins)
+head(penguins)
+tail(penguins)
+summary(penguins)
+
+```
+
+```{r}
+skim(penguins)
+ggpairs(penguins)
+```
